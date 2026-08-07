@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LECP CSS Component Reference</title>
+<link rel="stylesheet" href="lecp.css">
+<style>
+  .demo-block { padding: var(--lecp-space-8) 0; border-bottom: 1px solid var(--lecp-line); }
+  .demo-block:last-child { border-bottom: none; }
+  .demo-row { display: flex; flex-wrap: wrap; gap: var(--lecp-space-3); align-items: center; }
+</style>
+</head>
+<body>
+
+  <a class="lecp-skip-link" href="#main">Skip to content</a>
+
+  <header class="lecp-container" style="padding-top: var(--lecp-space-7); padding-bottom: var(--lecp-space-5);">
+    <p class="lecp-eyebrow">LECP CSS</p>
+    <h1 class="lecp-title">Component reference</h1>
+    <p class="lecp-body lecp-mt-3">Every component reads its color, spacing, motion, and type from the tokens in <code>lecp.css</code>. Retheme by overriding <code>:root</code> nothing below needs to change.</p>
+  </header>
+
+  <main id="main" class="lecp-container">
+
+    <section class="demo-block">
+      <h2 class="lecp-section-title lecp-mb-5">Typography</h2>
+      <p class="lecp-display">Display</p>
+      <p class="lecp-title">Title</p>
+      <p class="lecp-section-title">Section</p>
+      <p class="lecp-tile-label">Tile label</p>
+      <p class="lecp-body">Body text sits here, wrapped to a comfortable measure so paragraphs stay readable regardless of container width.</p>
+      <p class="lecp-meta">Meta label</p>
+      <p class="lecp-caption">Caption text</p>
+    </section>
+
+    <section class="demo-block">
+      <h2 class="lecp-section-title lecp-mb-5">Nav</h2>
+      <nav class="lecp-nav" aria-label="Example" style="max-width: 320px;">
+        <a class="lecp-nav-item is-active" href="#">
+          <span class="lecp-nav-item-index">01</span>
+          <span class="lecp-nav-item-label">Overview</span>
+        </a>
+        <a class="lecp-nav-item" href="#">
+          <span class="lecp-nav-item-index">02</span>
+          <span class="lecp-nav-item-label">Components</span>
+        </a>
+        <a class="lecp-nav-item" href="#">
+          <span class="lecp-nav-item-index">03</span>
+          <span class="lecp-nav-item-label">Tokens</span>
+        </a>
+      </nav>
+    </section>
+
+    <section class="demo-block">
+      <h2 class="lecp-section-title lecp-mb-5">Tiles</h2>
+      <div class="lecp-grid">
+        <a class="lecp-tile lecp-col-8" href="#">
+          <span class="lecp-meta">Featured</span>
+          <h3 class="lecp-tile-label">Primary destination tile</h3>
+          <p class="lecp-body">Size communicates importance: this tile spans 8 of 12 columns because it's the most likely next action.</p>
+          <span class="lecp-tile-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="lecp-tile lecp-col-4 lecp-tile--primary" href="#">
+          <span class="lecp-meta">Action</span>
+          <h3 class="lecp-tile-label">Get started</h3>
+          <span class="lecp-tile-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="lecp-tile lecp-col-4" href="https://example.com" target="_blank" rel="noopener">
+          <span class="lecp-meta">External</span>
+          <h3 class="lecp-tile-label">Documentation</h3>
+          <span class="lecp-body">Opens on another site.</span>
+          <span class="lecp-sr-only">(opens in a new tab)</span>
+          <span class="lecp-tile-arrow" aria-hidden="true">→</span>
+        </a>
+        <div class="lecp-tile lecp-col-4" aria-disabled="true">
+          <span class="lecp-meta">Disabled</span>
+          <h3 class="lecp-tile-label">Locked feature</h3>
+          <p class="lecp-body">Upgrade your plan to unlock this.</p>
+        </div>
+        <div class="lecp-tile lecp-col-4 lecp-tile--error">
+          <span class="lecp-meta">Error</span>
+          <h3 class="lecp-tile-label">Sync failed</h3>
+          <p class="lecp-body">Check your connection and retry.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-block">
+      <h2 class="lecp-section-title lecp-mb-5">Buttons</h2>
+      <div class="demo-row">
+        <button class="lecp-btn lecp-btn--primary">Save changes</button>
+        <button class="lecp-btn">Cancel</button>
+        <button class="lecp-btn lecp-btn--ghost">Ghost</button>
+        <button class="lecp-btn lecp-btn--danger">Delete account</button>
+        <button class="lecp-btn lecp-btn--sm">Small</button>
+        <button class="lecp-btn" disabled>Disabled</button>
+        <button class="lecp-btn lecp-btn--primary lecp-btn--loading">Saving</button>
+      </div>
+    </section>
+
+    <section class="demo-block">
+      <h2 class="lecp-section-title lecp-mb-5">Form</h2>
+      <form style="max-width: 420px;">
+        <div class="lecp-field">
+          <label class="lecp-label" for="name">Full name</label>
+          <input class="lecp-input" id="name" type="text" placeholder="Socrates">
+        </div>
+        <div class="lecp-field lecp-field--error">
+          <label class="lecp-label" for="email">Email</label>
+          <input class="lecp-input" id="email" type="email" value="not-an-email" aria-invalid="true" aria-describedby="email-error">
+          <p class="lecp-field-error-text" id="email-error">⚠ Enter a valid email address.</p>
+        </div>
+        <div class="lecp-field">
+          <label class="lecp-label" for="note">Message</label>
+          <textarea class="lecp-textarea" id="note" placeholder="Say something"></textarea>
+          <p class="lecp-field-hint">Optional - up to 500 characters.</p>
+        </div>
+        <button class="lecp-btn lecp-btn--primary" type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="demo-block">
+      <h2 class="lecp-section-title lecp-mb-5">Badges</h2>
+      <div class="demo-row">
+        <span class="lecp-badge">Neutral</span>
+        <span class="lecp-badge lecp-badge--success">✓ Active</span>
+        <span class="lecp-badge lecp-badge--warning">⚠ Pending</span>
+        <span class="lecp-badge lecp-badge--error">✕ Failed</span>
+      </div>
+    </section>
+
+    <section class="demo-block">
+      <h2 class="lecp-section-title lecp-mb-5">Toast</h2>
+      <div class="lecp-toast" role="status" style="position: static; max-width: 360px;">
+        <span aria-hidden="true">✓</span>
+        <div>
+          <p class="lecp-tile-label" style="font-size: var(--lecp-type-body);">Changes saved.</p>
+          <p class="lecp-caption">Just now</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="lecp-container" style="padding: var(--lecp-space-7) var(--lecp-margin);">
+    <p class="lecp-caption">LECP CSS reference page.</p>
+  </footer>
+
+</body>
+</html>
