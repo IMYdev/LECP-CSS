@@ -15,6 +15,40 @@
 
   <a class="lecp-skip-link" href="#main">Skip to content</a>
 
+  <div class="lecp-shell">
+
+    <aside class="lecp-rail">
+      <nav class="lecp-nav" aria-label="Reference sections">
+        <a class="lecp-nav-item is-active" href="#typography">
+          <span class="lecp-nav-item-index">01</span>
+          <span class="lecp-nav-item-label">Typography</span>
+        </a>
+        <a class="lecp-nav-item" href="#tiles">
+          <span class="lecp-nav-item-index">02</span>
+          <span class="lecp-nav-item-label">Tiles</span>
+        </a>
+        <a class="lecp-nav-item" href="#buttons">
+          <span class="lecp-nav-item-index">03</span>
+          <span class="lecp-nav-item-label">Buttons</span>
+        </a>
+        <a class="lecp-nav-item" href="#forms">
+          <span class="lecp-nav-item-index">04</span>
+          <span class="lecp-nav-item-label">Forms</span>
+        </a>
+        <a class="lecp-nav-item" href="#badges">
+          <span class="lecp-nav-item-index">05</span>
+          <span class="lecp-nav-item-label">Badges</span>
+        </a>
+        <a class="lecp-nav-item" href="#toast">
+          <span class="lecp-nav-item-index">06</span>
+          <span class="lecp-nav-item-label">Toast</span>
+        </a>
+      </nav>
+      <p class="lecp-caption" style="margin-top: auto; padding: 0 var(--lecp-space-2);">LECP-CSS reference</p>
+    </aside>
+
+    <div class="lecp-shell-content">
+
   <header class="lecp-container" style="padding-top: var(--lecp-space-7); padding-bottom: var(--lecp-space-5);">
     <p class="lecp-eyebrow">LECP CSS</p>
     <h1 class="lecp-title">Component reference</h1>
@@ -23,7 +57,7 @@
 
   <main id="main" class="lecp-container">
 
-    <section class="demo-block">
+    <section class="demo-block" id="typography">
       <h2 class="lecp-section-title lecp-mb-5">Typography</h2>
       <p class="lecp-display">Display</p>
       <p class="lecp-title">Title</p>
@@ -34,26 +68,7 @@
       <p class="lecp-caption">Caption text</p>
     </section>
 
-    <section class="demo-block">
-      <h2 class="lecp-section-title lecp-mb-5">Nav</h2>
-      <nav class="lecp-nav" aria-label="Example" style="max-width: 320px;">
-        <a class="lecp-nav-item is-active" href="#">
-          <span class="lecp-nav-item-index">01</span>
-          <span class="lecp-nav-item-label">Overview</span>
-        </a>
-        <a class="lecp-nav-item" href="#">
-          <span class="lecp-nav-item-index">02</span>
-          <span class="lecp-nav-item-label">Components</span>
-        </a>
-        <a class="lecp-nav-item" href="#">
-          <span class="lecp-nav-item-index">03</span>
-          <span class="lecp-nav-item-label">Tokens</span>
-        </a>
-      </nav>
-    </section>
-
-    <section class="demo-block">
-      <h2 class="lecp-section-title lecp-mb-5">Tiles</h2>
+    <section class="demo-block" id="tiles">
       <div class="lecp-grid">
         <a class="lecp-tile lecp-col-8" href="#">
           <span class="lecp-meta">Featured</span>
@@ -66,7 +81,7 @@
           <h3 class="lecp-tile-label">Get started</h3>
           <span class="lecp-tile-arrow" aria-hidden="true">→</span>
         </a>
-        <a class="lecp-tile lecp-col-4" href="https://example.com" target="_blank" rel="noopener">
+        <a class="lecp-tile lecp-col-4" href="https://github.com/IMYdev/LECP-CSS" target="_blank" rel="noopener">
           <span class="lecp-meta">External</span>
           <h3 class="lecp-tile-label">Documentation</h3>
           <span class="lecp-body">Opens on another site.</span>
@@ -86,7 +101,7 @@
       </div>
     </section>
 
-    <section class="demo-block">
+    <section class="demo-block" id="buttons">
       <h2 class="lecp-section-title lecp-mb-5">Buttons</h2>
       <div class="demo-row">
         <button class="lecp-btn lecp-btn--primary">Save changes</button>
@@ -94,12 +109,13 @@
         <button class="lecp-btn lecp-btn--ghost">Ghost</button>
         <button class="lecp-btn lecp-btn--danger">Delete account</button>
         <button class="lecp-btn lecp-btn--sm">Small</button>
+        <button class="lecp-btn lecp-btn--xs">Badge sized</button>
         <button class="lecp-btn" disabled>Disabled</button>
         <button class="lecp-btn lecp-btn--primary lecp-btn--loading">Saving</button>
       </div>
     </section>
 
-    <section class="demo-block">
+    <section class="demo-block" id="forms">
       <h2 class="lecp-section-title lecp-mb-5">Form</h2>
       <form style="max-width: 420px;">
         <div class="lecp-field">
@@ -120,7 +136,7 @@
       </form>
     </section>
 
-    <section class="demo-block">
+    <section class="demo-block" id="badges">
       <h2 class="lecp-section-title lecp-mb-5">Badges</h2>
       <div class="demo-row">
         <span class="lecp-badge">Neutral</span>
@@ -130,7 +146,7 @@
       </div>
     </section>
 
-    <section class="demo-block">
+    <section class="demo-block" id="toast">
       <h2 class="lecp-section-title lecp-mb-5">Toast</h2>
       <div class="lecp-toast" role="status" style="position: static; max-width: 360px;">
         <span aria-hidden="true">✓</span>
@@ -143,9 +159,9 @@
 
   </main>
 
-  <footer class="lecp-container" style="padding: var(--lecp-space-7) var(--lecp-margin);">
-    <p class="lecp-caption">LECP CSS reference page.</p>
-  </footer>
+    </div>
+
+  </div>
 
 </body>
 </html>

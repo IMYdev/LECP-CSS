@@ -10,9 +10,10 @@
 - Retheme by overriding CSS custom properties.
 - 12-column responsive grid with breakpoint-prefixed column classes (`c-`, `s-`, `w-`).
 - Components: tile/card, nav, button, form fields, badge, toast.
+- App layout: `.lecp-shell` / `.lecp-rail` pin a sticky left navigation beside content; the nav reflows to a fixed bottom tab bar on compact screens.
 - `:focus-visible` defined on every interactive component by default.
 - `prefers-reduced-motion` handled once, globally, in the base reset.
-- Minimum 44px touch targets on all interactive elements.
+- Minimum 32px touch targets on all interactive elements.
 ---
 
 ## Installation
@@ -55,12 +56,13 @@ Override the custom properties defined in `:root` to retheme a project:
 | Class | Description |
 |---|---|
 | `.lecp-container` | Max-width content wrapper with responsive side padding. |
+| `.lecp-shell` / `.lecp-shell-content` / `.lecp-rail` | App-level layout: a sticky sidebar rail beside the content column. `.lecp-shell` sets the two-column grid; `.lecp-rail` pins left and collapses on compact screens; `.lecp-shell-content` is the fluid content column. |
 | `.lecp-grid` / `.lecp-col-*` | 12-column grid. `.lecp-col-4` applies at all sizes; `.lecp-col-c-*`, `.lecp-col-s-*`, `.lecp-col-w-*` apply from the compact/standard/wide breakpoint up. |
 | `.lecp-tile` | Core interactive unit (card, row, or panel). Modifiers: `--s`/`--m`/`--l`/`--xl` for size, `--primary`, `--selected`, `--loading`, `--error` for state. Tiles with `target="_blank"` receive a static external-link icon automatically. |
-| `.lecp-nav` / `.lecp-nav-item` | Navigation list. Vertical by default; add `data-orientation="horizontal"` for a horizontal or tab-style layout. Add `.is-active` to mark the current item. |
-| `.lecp-btn` | Button. Modifiers: `--primary`, `--ghost`, `--danger`, `--sm`, `--loading`. |
+| `.lecp-nav` / `.lecp-nav-item` | Navigation list. Vertical by default; add `data-orientation="horizontal"` for a horizontal or tab-style layout. Add `.is-active` to mark the current item. Commonly used inside `.lecp-rail`; on compact screens it becomes a fixed bottom tab bar, the item label collapses and only the item index renders as the tab. |
+| `.lecp-btn` | Button. Modifiers: `--primary`, `--ghost`, `--danger`, `--sm`, `--xs` (badge-sized), `--loading`. |
 | `.lecp-field` / `.lecp-label` / `.lecp-input` / `.lecp-select` / `.lecp-textarea` | Form primitives. Add `.lecp-field--error` with a `.lecp-field-error-text` for validation states. |
-| `.lecp-badge` | Status indicator. Modifiers: `--success`, `--warning`, `--error`. |
+| `.lecp-badge` | Status indicator. Fixed pill size via `.lecp-badge-min-width` / `--lecp-badge-min-height`. Modifiers: `--success`, `--warning`, `--error`. |
 | `.lecp-toast-region` / `.lecp-toast` | Notification container and individual notification. |
 | `.lecp-skip-link` / `.lecp-sr-only` | Accessibility utilities for skip-to-content links and visually hidden text. |
 
